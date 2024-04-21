@@ -14,12 +14,19 @@
         .header {
             text-align: center;
             padding: 20px;
+            position: sticky; /* Sticky header for better navigation */
+            top: 0;
+            background-color: purple;
+            z-index: 100; /* Ensure the header stays on top */
         }
         .header a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
             font-weight: bold;
+        }
+        .header a:hover {
+            text-decoration: underline;
         }
         .gallery {
             display: grid;
@@ -37,6 +44,9 @@
             font-size: 1.2em;
             padding: 10px;
         }
+        .content {
+            padding: 20px;
+        }
         .footer {
             text-align: center;
             padding: 20px;
@@ -50,13 +60,17 @@
     </style>
 </head>
 <body>
+    <!-- Header with Navigation Links -->
     <div class="header">
         <a href="#stories">Stories</a>
         <a href="#images">Images</a>
         <a href="#about">About</a>
     </div>
 
+    <!-- Images Section -->
     <div class="gallery" id="images">
+        <h2>Images</h2>
+        <!-- 10 large images with captions -->
         <figure>
             <img src="https://via.placeholder.com/800x600?text=Landscape+1" alt="Landscape 1">
             <figcaption>Mountain Sunrise</figcaption>
@@ -99,6 +113,19 @@
         </figure>
     </div>
 
+    <!-- Stories Section -->
+    <div class="content" id="stories">
+        <h2>Stories</h2>
+        <p>Welcome to the Stories section of the Photography Blog. Here, you'll find various articles and stories about our adventures, photo shoots, and behind-the-scenes insights into our photography process.</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="content" id="about">
+        <h2>About Us</h2>
+        <p>Welcome to the Photography Blog! We are a group of passionate photographers who love capturing the beauty of the world. Our blog showcases our journey, experiences, and stories through stunning imagery and engaging articles. Follow us to stay updated on our latest adventures.</p>
+    </div>
+
+    <!-- Footer -->
     <div class="footer">
         <p>© 2024 Photography Blog. All rights reserved.</p>
         <p>Contact: info@photographyblog.com</p>
